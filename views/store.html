@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../style/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="store inner">
+    <h2 class="store-heading a11yHidden">매장찾기</h2>
+    <div class="store-search">
+        <ul class="store-search__tablist" role="tablist">
+          <li id="storeName" role="tab" aria-controls="storeName" aria-selected="true" tabindex="0">점포명</li>
+          <li id="address" role="tab" aria-controls="address" aria-selected="false" tabindex="0">주소</li>
+        </ul>
+          <form
+            method="POST"
+            action="https://formspree.io/seulbinim@gmail.com"
+            class="store-search__form"
+          >
+            <fieldset>
+              <legend>매장 검색 폼</legend>
+              <div class="store-search__container">
+                <label for="search" class="a11yHidden">매장 검색하기</label>
+                <input
+                  type="search"
+                  id="search"
+                  name="search"
+                  placeholder="검색어"
+                  class="store-search__input"
+                  required
+                />
+                <button type="submit" class="store-search__button">검색</button>
+              </div>
+            </fieldset>
+          </form>
+        <div class="store-search__tabContents">
+          <ul id="storeName" role="tabpanel" aria-labelledby="storeName">
+          <li class="store-search__items">
+            <img class="store-search__thumbnail" src="./../images/store-thumbnail.jpg" alt="이디야 로고">
+            <span>길음 뉴타운점</span>
+            <address>
+              서울 성북구 길음로 74 (길음동, 길음 에스에이치빌)
+            </address>
+          </li>
+          <li class="store-search__items">
+            <img class="store-search__thumbnail" src="./../images/store-thumbnail.jpg" alt="이디야 로고">
+            <span>길음 중앙점</span>
+            <address>
+              서울 성북구 도봉로 11 (길음동, 삼주빌딩) 
+            </address>
+          </li>        
+          </ul>
+            
+        </div>
+    </div>
+    <img class="store-map"src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+    &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+    &markers=color:red%7Clabel:C%7C40.718217,-73.998284
+    &key=AIzaSyBsAuv1a9j1-UEsJtZtkpEJGnSHWh3a7PI" alt="구글 맵">
+
+  </section>
+</body>
+</html>
