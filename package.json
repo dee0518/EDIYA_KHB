@@ -3,7 +3,7 @@
     "start": "run-p dev watch:sass",
     "htmlhint": "htmlhint '**/*.html'",
     "watch:htmlhint": "SHELL=/bin/bash chokidar --initial --silent '**/*.html' -c 'npm run htmlhint'",
-    "sass": "sass scss:style",
+    "sass": "sass scss:css",
     "watch:sass": "npm run sass -- --watch",
     "dev": "live-server",
     "build:sass": "npm run sass -- --no-source-map",
