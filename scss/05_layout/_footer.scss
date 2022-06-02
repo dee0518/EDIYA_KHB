@@ -1,3 +1,78 @@
 // 푸터 시작 --------------------------------------------------------------------- /
+.footer {
+  position: relative;
+  background: $grayscaleBlack;
+  padding-bottom: rem(30px);
 
+  &__logo {
+    position: absolute;
+    top: rem(104px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__nav__list {
+    padding-top: 13px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid rgba(97,97,97, .5);
+    color: $grayscaleGray2;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin-right: 7px;
+
+      &:nth-child(n + 5) {
+        margin-top: 1px;
+      }
+
+      a {
+        @include paddingX(4px);
+        @include paddingY(2px);
+        @include fontStyle(400, 12px, 1.5);
+
+        a:hover {
+          color: $grayscaleWhite;
+        }
+      }
+    }
+  }
+
+  &__info {
+    padding-top: rem(68px);
+    text-align: center;
+    @include paddingX(22px);
+
+    address {
+      margin-bottom: rem(15px);
+      color: $grayscaleGray2;
+      @include fontStyle(400,12px, 1.5);
+
+      & > span {
+        display: block;
+        margin-bottom: 5px;
+
+        & > span:first-child {
+          font-weight: bold;
+        }
+      }
+
+      & > span:nth-child(2), & > span:nth-child(3) {
+        display: inline-block;
+        margin-right: 11px;
+      }
+
+      & > span:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .copyright {
+    display: block;
+    text-align: center;
+    color: $grayscaleGray2;
+    @include fontStyle(700, 11px, 1.5);
+  }
+}
 // 푸터 종료 --------------------------------------------------------------------- /
