@@ -1,3 +1,14 @@
+@use "../01_config" as *;
+@use "../02_utils" as *;
 // .ediya 컨테이너 레이아웃 시작---------------------------------------------------------- /
 
 // .ediya 컨테이너 레이아웃 종료---------------------------------------------------------- /
+.inner {
+  @include mobile {
+    @include marginX(18px);
+  }
+
+  @include desktop {
+    @include boxSizeMinMax(auto, 740px)
+  }
+}
