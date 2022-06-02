@@ -47,3 +47,11 @@
   padding-left: rem($paddingX);
   padding-right: rem($paddingX);
 }
+
+// 버튼 기본 스타일 제거
+@mixin buttonNone {
+  appearance:none;
+  border:0;
+  padding:0;
+  background:none;
+}

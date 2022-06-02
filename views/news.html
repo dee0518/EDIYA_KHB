@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <title>이디야 뉴스</title>
 </head>
 <body>
@@ -26,17 +26,17 @@
           <li><a href="./news.html">이디야 뉴스</a></li>
           <li><a href="./store.html">매장찾기</a></li>
         </ul>
+        <button type="button" aria-label="메뉴 닫기"></button>
       </nav>
-      <button type="button" aria-label="메뉴 닫기"></button>
     </div>
   </header>
   <main class="news">
     <h2 class="a11yHidden">이디야 뉴스 컨텐츠</h2>
     <ul class="news__tabs__list" role="tablist">
-      <li class="news__tabs__item" role="none"><a href="#" id="newsTab01" role="tab" aria-controls="notices">공지사항</a></li>
-      <li class="news__tabs__item" role="none"><a href="#" id="newsTab02" role="tab" aria-controls="press">언론 속 이디야</a></li>
-      <li class="news__tabs__item" role="none"><a href="#" id="newsTab03" role="tab" aria-controls="marketing">홍보영상</a></li>
-      <li class="news__tabs__item" role="none"><a href="#" id="newsTab04" role="tab" aria-controls="award">수상내역</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab01" role="tab" aria-selected="true" aria-controls="notices">공지사항</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab02" role="tab" aria-selected="false" aria-controls="press">언론 속 이디야</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab03" role="tab" aria-selected="false" aria-controls="marketing">홍보영상</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab04" role="tab" aria-selected="false" aria-controls="award">수상내역</a></li>
     </ul>
     <section id="notices" aria-describedby="newsTab01" role="tabpanel">
       <div class="inner">
