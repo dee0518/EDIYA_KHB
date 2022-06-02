@@ -12,6 +12,13 @@
 
 // 요소 박스의 크기 고정 ----------------------------------------------------------- /
 
+// 폰트 스타일
+@mixin fontStyle($weight: normal, $size: 16px, $lh: normal) {
+  font-weight: $weight;
+  font-size: rem($size);
+  line-height: $lh;
+}
+
 // box sizing
 @mixin boxSizeMinMax($min: 768px, $max: 1200px) {
   min-width: $min;
