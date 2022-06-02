@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../style/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="signIn inner">
+    <h2 class="signIn-heading">로그인</h2>
+    <p class="signIn-ment">Welcome, Ediya Coffee</p>
+    <p class="signIn-ment">이디야커피에 오신 것을 환영합니다.</p>
+    <form
+      method="POST"
+      action="/"
+      class="signIn-form"
+    >
+      <fieldset>
+        <legend>로그인 폼</legend>
+        <div class="signIn-form__userID">
+          <label for="userEmail">이메일</label>
+          <input
+            type="email"
+            id="userEmail"
+            required
+            name="userEmail"
+          />
+          <em class="signIn-form__warning">이메일 입력 방법이 잘못되었습니다. (예:user@domain.io)</em>
+        </div>
+        <div class="signIn-form__userPW">
+          <label for="userPw">패스워드</label>
+          <input
+            type="password"
+            id="userPw"
+            placeholder="숫자,영어 조합 6자 이상"
+            required
+            name="userPw"
+          />
+          <em class="signIn-form__warning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</em>
+
+        </div>
+        <input type="checkbox" id="saveEmail" name="saveEmail"><label for="saveEmail"> 이메일 저장</label>
+        <button type="submit" class="signIn-form___login-button">로그인</button>
+        <a class="signIn-form___sign-button" href="/">회원가입</a>
+      </fieldset>
+    </form>
+  </section>
+</body>
+</html>

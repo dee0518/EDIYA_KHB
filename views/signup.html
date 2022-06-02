@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../style/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <section class="signUp inner">
+    <h2 class="signUp-heading">회원가입</h2>
+    <p class="signUp-ment">Join Us, Ediya Coffee</p>
+    <p class="signUp-ment">이디야멤버스 가입을 진행합니다.</p>
+    <form
+    method="POST"
+    action="/"
+    class="signIn-form"
+  >
+    <fieldset>
+      <legend>회원가입 폼</legend>
+      <div class="signUp-form__userID">
+        <label for="userEmail">이메일</label>
+        <input
+          type="email"
+          id="userEmail"
+          required
+          name="userEmail"
+        />
+        <em class="signUp-form__warning">이메일 입력 방법이 잘못되었습니다. (예:user@domain.io)</em>
+      </div>
+      <div class="signUp-form__userPW">
+        <label for="userPw">패스워드</label>
+        <input
+          type="password"
+          id="userPw"
+          placeholder="숫자,영어 조합 6자 이상"
+          required
+          name="userPw"
+        />
+        <em class="signUp-form__warning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</em>
+
+      </div>
+      <div class="signUp-form__checkPW">
+        <label for="userPw">패스워드 확인</label>
+        <input
+          type="password"
+          id="userPw"
+          placeholder="숫자,영어 조합 6자 이상"
+          required
+          name="userPw"
+        />
+        <em class="signUp-form__warning">패스워드는 숫자, 영어 조합 6자 이상 입력해야 합니다.</em>
+
+      </div>
+      <button type="submit" class="signUp-form___login-button">가입하기</button>
+      <a class="signUp-form___sign-button" href="/">로그인</a>
+    </fieldset>
+  </form>
+  </section>
+</body>
+</html>
