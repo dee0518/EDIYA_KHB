@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>이디야 뉴스</title>
+</head>
+<body>
+  <!-- aria-selected이런거 찾아보기 -->
+  <header class="header">
+    <div class="inner">
+      <h1 class="logo">
+        <a href="/">
+          <img src="../images/brand.svg" alt="EDIYA">
+        </a>
+      </h1>
+      <button type="button" aria-label="메뉴"></button>
+      <nav class="nav">
+        <h2 class="a11yHidden">navigation</h2>
+        <ul>
+          <li><a href="./signin.html">로그인</a></li>
+          <li><a href="./signup.html">회원가입</a></li>
+          <li><a href="./beverage.html">이디야 음료</a></li>
+          <li><a href="./news.html">이디야 뉴스</a></li>
+          <li><a href="./store.html">매장찾기</a></li>
+        </ul>
+      </nav>
+      <button type="button" aria-label="메뉴 닫기"></button>
+    </div>
+  </header>
+  <main class="news">
+    <h2 class="a11yHidden">이디야 뉴스 컨텐츠</h2>
+    <ul class="news__tabs__list" role="tablist">
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab01" role="tab" aria-controls="notices">공지사항</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab02" role="tab" aria-controls="press">언론 속 이디야</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab03" role="tab" aria-controls="marketing">홍보영상</a></li>
+      <li class="news__tabs__item" role="none"><a href="#" id="newsTab04" role="tab" aria-controls="award">수상내역</a></li>
+    </ul>
+    <section id="notices" aria-describedby="newsTab01" role="tabpanel">
+      <div class="inner">
+        <h2 class="notices__title">공지사항</h2>
+        <p class="notices__desc">공지사항 내역입니다.</p>
+      </div>
+    </section>
+    <section id="press" aria-describedby="newsTab02" role="tabpanel">
+      <div class="inner">
+        <h2 class="press__title">언론 속 이디야</h2>
+        <p class="press__desc">이디야의 소식을 전해드립니다.</p>
+        <form action="/" method="POST" class="press__search__form">
+          <fieldset>
+            <legend class="a11yHidden">뉴스 소식 검새어</legend>
+            <select aria-label="뉴스 검색 필터">
+              <option value="title">제목</option>
+              <option value="content">내용</option>
+            </select>
+            <div class="press__input-wrapper">
+              <label for="newsSearch">뉴스 검색어</label>
+              <input type="text" id="newsSearch" placeholder="검색어 입력(예: 이디야)">
+              <button type="submit" aria-label="검색"></button>
+            </div>
+          </fieldset>
+        </form>
+        <table>
+          <caption class="a11yHidden">이디야 소식 목록</caption>
+          <thead>
+            <tr>
+              <td>순서</td>
+              <td>내용</td>
+              <td>날짜</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>016</td>
+              <td>
+                <figure>
+                  <img src="../images/news-thumbnail.jpg" alt="">
+                </figure>
+                <dl>
+                  <dt>[FETV] 이디야 커피, '배달</dt>
+                  <dd>이디야 커피가 배달 어플리케이션 배달의 민족에서 음료 및 배송을 시작했다.</dd>
+                </dl>
+              </td>
+              <td><time datetime="2022-06-02">2022-06-02</time></td>
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="pagination" role="navigation" aria-label="pagination">
+          <button type="button" aria-label="이전 소식 목록"></button>
+          <ul class="pagination__number">
+            <li><button type="button" aria-label="page" aria-current="page">1</button></li>
+            <li><button type="button" aria-label="page">2</button></li>
+            <li><button type="button" aria-label="page">3</button></li>
+            <li><button type="button" aria-label="page">4</button></li>
+            <li><button type="button" aria-label="page">5</button></li>
+          </ul>
+          <button type="button" aria-label="다음 소식 목록"></button>
+        </div>
+      </div>
+    </section>
+    <section id="marketing" aria-describedby="newsTab03" role="tabpanel">
+      <div class="inner">
+        <h2 class="marketing__title">홍보영상</h2>
+        <p class="marketing__desc">홍보영상 내역입니다.</p>
+      </div>
+    </section>
+    <section id="award" aria-describedby="newsTab04" role="tabpanel">
+      <div class="inner">
+        <h2 class="award__title">수상내역</h2>
+        <p class="award__desc">이디야의 영광스런 수상내역입니다.</p>
+      </div>
+      <div class="award_bg">
+        <div class="inner">
+          <ul class="year__list">
+            <li class="year__item">
+              <h3>2019<span class="a11yHidden">년 수상내역</span></h3>
+              <ul class="award__list">
+                <li class="award__item">
+                  <button type="button" data-month="11">고용 노동부 주관, 일 생활 균형 우수기업 선정</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+                <li class="award__item">
+                  <button type="button" data-month="10">고용 노동부 주관, 일 생활 균형 우수기업 선정</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+                <li class="award__item">
+                  <button type="button" data-month="06">고용 노동부 주관, 일 생활 균형 우수기업 선정</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="year__item">
+              <h3>2018<span class="a11yHidden">년 수상내역</span></h3>
+              <ul class="award__list">
+                <li class="award__item">
+                  <button type="button" data-month="12">소비자 중심경영(CCM) 인증 획득</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+              </ul>
+            </li>
+            <li class="year__item">
+              <h3>2017<span class="a11yHidden">년 수상내역</span></h3>
+              <ul class="award__list">
+                <li class="award__item">
+                  <button type="button" data-month="06">대한민국 창업대상 산업통상자원부 장관상 수상</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+                <li class="award__item">
+                  <button type="button" data-month="02">사회보험 사각지대 해소 '특별상'수상</button>
+                  <p>
+                    <img src="../images/thumbnail-award.jpg" alt="">
+                    <span>서울 경제에서 주최하는 대한민국 창업대상 CEO 부문에 국무총리상을 수상하였습니다.</span>
+                    <time datetime="2019-06-18">2019.06.18</time>
+                  </p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo">
+      <img src="../images/brand-dark.svg" alt="EDIYA COFFEE">
+    </div>
+    <ul class="footer__nav__list">
+      <li><a href="/">개인정보처리방침</a></li>
+      <li><a href="/">멤버스 이용약관</a></li>
+      <li><a href="/">가맹 안내</a></li>
+      <li><a href="/">대량쿠폰구매</a></li>
+      <li><a href="/">채용안내</a></li>
+      <li><a href="/">고객의 소리</a></li>
+      <li><a href="/">사이트맵</a></li>
+      <li><a href="/">점주의 방</a></li>
+    </ul>
+    <div class="footer__info">
+      <address>
+        <span><span>주소</span><span aria-hidden="true">:</span><span>서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동 221-17)</span></span>
+        <span><span>TEL</span><span aria-hidden="true">:</span><span>02-543-6467</span></span>
+        <span><span>FAX</span><span aria-hidden="true">:</span><span>02-543-7191</span></span>
+        <span><span>사업자등록번호</span><span aria-hidden="true">:</span><span>107-86-16302</span></span>
+        <span><span>통신판매업신고</span><span aria-hidden="true">:</span><span>강남 제002519호</span></span>
+        <span><span>대표이사</span><span aria-hidden="true">:</span><span>문창기</span></span>
+      </address>
+    </div>
+    <small class="copyright">&copy;2022 EDIYA COFFEE COMPANY.ALL RIGHTS RESERVED.</small>
+  </footer>
+</body>
+</html>
