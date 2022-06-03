@@ -34,29 +34,33 @@
     <h2 class="a11yHidden">이디야 뉴스 컨텐츠</h2>
     <ul class="news__tabs__list" role="tablist">
       <li class="news__tabs__item" role="none"><a href="#" id="newsTab01" role="tab" aria-selected="true" aria-controls="notices">공지사항</a></li>
-      <li class="news__tabs__item" role="none"><a href="#" id="newsTab02" role="tab" aria-selected="false" aria-controls="press">언론 속 이디야</a></li>
+      <li class="news__tabs__item is--active" role="none"><a href="#" id="newsTab02" role="tab" aria-selected="false" aria-controls="press">언론 속 이디야</a></li>
       <li class="news__tabs__item" role="none"><a href="#" id="newsTab03" role="tab" aria-selected="false" aria-controls="marketing">홍보영상</a></li>
       <li class="news__tabs__item" role="none"><a href="#" id="newsTab04" role="tab" aria-selected="false" aria-controls="award">수상내역</a></li>
     </ul>
-    <section id="notices" aria-describedby="newsTab01" role="tabpanel">
+    <section id="notices" class="notices" aria-describedby="newsTab01" role="tabpanel">
       <div class="inner">
-        <h2 class="notices__title">공지사항</h2>
-        <p class="notices__desc">공지사항 내역입니다.</p>
+        <div class="notices__title__group">
+          <h2 class="notices__title">공지사항</h2>
+          <p class="notices__desc">공지사항 내역입니다.</p>
+        </div>
       </div>
     </section>
-    <section id="press" aria-describedby="newsTab02" role="tabpanel">
+    <section id="press" class="press" aria-describedby="newsTab02" role="tabpanel">
       <div class="inner">
-        <h2 class="press__title">언론 속 이디야</h2>
-        <p class="press__desc">이디야의 소식을 전해드립니다.</p>
+        <div class="marketing__title__group">
+          <h2 class="press__title">언론 속 이디야</h2>
+          <p class="press__desc">이디야의 소식을 전해드립니다.</p>
+        </div>
         <form action="/" method="POST" class="press__search__form">
           <fieldset>
-            <legend class="a11yHidden">뉴스 소식 검새어</legend>
+            <legend class="a11yHidden">뉴스 소식 검색어</legend>
             <select aria-label="뉴스 검색 필터">
               <option value="title">제목</option>
               <option value="content">내용</option>
             </select>
             <div class="press__input-wrapper">
-              <label for="newsSearch">뉴스 검색어</label>
+              <label for="newsSearch" class="a11yHidden">뉴스 검색어</label>
               <input type="text" id="newsSearch" placeholder="검색어 입력(예: 이디야)">
               <button type="submit" aria-label="검색"></button>
             </div>
@@ -85,13 +89,65 @@
               </td>
               <td><time datetime="2022-06-02">2022-06-02</time></td>
             </tr>
+            <tr>
+              <td>016</td>
+              <td>
+                <figure>
+                  <img src="../images/news-thumbnail.jpg" alt="">
+                </figure>
+                <dl>
+                  <dt>[FETV] 이디야 커피, '배달</dt>
+                  <dd>이디야 커피가 배달 어플리케이션 배달의 민족에서 음료 및 배송을 시작했다.</dd>
+                </dl>
+              </td>
+              <td><time datetime="2022-06-02">2022-06-02</time></td>
+            </tr>
+            <tr>
+              <td>016</td>
+              <td>
+                <figure>
+                  <img src="../images/news-thumbnail.jpg" alt="">
+                </figure>
+                <dl>
+                  <dt>[FETV] 이디야 커피, '배달</dt>
+                  <dd>이디야 커피가 배달 어플리케이션 배달의 민족에서 음료 및 배송을 시작했다.</dd>
+                </dl>
+              </td>
+              <td><time datetime="2022-06-02">2022-06-02</time></td>
+            </tr>
+            <tr>
+              <td>016</td>
+              <td>
+                <figure>
+                  <img src="../images/news-thumbnail.jpg" alt="">
+                </figure>
+                <dl>
+                  <dt>[FETV] 이디야 커피, '배달</dt>
+                  <dd>이디야 커피가 배달 어플리케이션 배달의 민족에서 음료 및 배송을 시작했다.</dd>
+                </dl>
+              </td>
+              <td><time datetime="2022-06-02">2022-06-02</time></td>
+            </tr>
+            <tr>
+              <td>016</td>
+              <td>
+                <figure>
+                  <img src="../images/news-thumbnail.jpg" alt="">
+                </figure>
+                <dl>
+                  <dt>[FETV] 이디야 커피, '배달</dt>
+                  <dd>이디야 커피가 배달 어플리케이션 배달의 민족에서 음료 및 배송을 시작했다.</dd>
+                </dl>
+              </td>
+              <td><time datetime="2022-06-02">2022-06-02</time></td>
+            </tr>
 
           </tbody>
         </table>
         <div class="pagination" role="navigation" aria-label="pagination">
           <button type="button" aria-label="이전 소식 목록"></button>
           <ul class="pagination__number">
-            <li><button type="button" aria-label="page" aria-current="page">1</button></li>
+            <li class="is--active"><button type="button" aria-label="page" aria-current="page">1</button></li>
             <li><button type="button" aria-label="page">2</button></li>
             <li><button type="button" aria-label="page">3</button></li>
             <li><button type="button" aria-label="page">4</button></li>
@@ -101,18 +157,22 @@
         </div>
       </div>
     </section>
-    <section id="marketing" aria-describedby="newsTab03" role="tabpanel">
+    <section id="marketing" class="marketing" aria-describedby="newsTab03" role="tabpanel">
       <div class="inner">
-        <h2 class="marketing__title">홍보영상</h2>
-        <p class="marketing__desc">홍보영상 내역입니다.</p>
+        <div class="marketing__title__group">
+          <h2 class="marketing__title">홍보영상</h2>
+          <p class="marketing__desc">홍보영상 내역입니다.</p>
+        </div>
       </div>
     </section>
-    <section id="award" aria-describedby="newsTab04" role="tabpanel">
+    <section id="award" class="award" aria-describedby="newsTab04" role="tabpanel">
       <div class="inner">
-        <h2 class="award__title">수상내역</h2>
-        <p class="award__desc">이디야의 영광스런 수상내역입니다.</p>
+        <div class="award__title__group">
+          <h2 class="award__title">수상내역</h2>
+          <p class="award__desc">이디야의 영광스런 수상내역입니다.</p>
+        </div>
       </div>
-      <div class="award_bg">
+      <div class="award__bg">
         <div class="inner">
           <ul class="year__list">
             <li class="year__item">
@@ -147,7 +207,7 @@
             <li class="year__item">
               <h3>2018<span class="a11yHidden">년 수상내역</span></h3>
               <ul class="award__list">
-                <li class="award__item">
+                <li class="award__item is--active">
                   <button type="button" data-month="12">소비자 중심경영(CCM) 인증 획득</button>
                   <p>
                     <img src="../images/thumbnail-award.jpg" alt="">

@@ -1,3 +1,388 @@
 // 이디야 뉴스 (news) 공통 시작 ------------------------------------------------------------- /
+.news {
+  // 탭 리스트
+  &__tabs__list {
+    background: $grayscaleSnow;
+    @include flexbox($wrap: wrap);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    
+    @include mobile {
+      margin-bottom: 20px;
+    }
 
+    @include desktop {
+      width: 480px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+      gap: 2px;
+      @include autoMargin;
+      @include paddingX(2px);
+      @include paddingY(2px);
+    }
+  }
+
+  &__tabs__item {
+    text-align: center;
+    color: $primaryBlue;
+    background: $grayscaleWhite;
+    
+    &.is--active {
+      background: $primaryBlue;
+      color: $white;
+    }
+    
+    @include mobile {
+      flex-basis: calc(50% - 1px);
+      margin-right: 2px;
+      margin-bottom: 2px;
+      
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+      
+      &:nth-child(n + 3){
+        margin-bottom: 0;
+      }
+    }
+    
+    @include desktop {
+      flex-basis: 118px;
+    }
+
+    a {
+      display: block;
+      @include fontStyle(bold, 15px, 150%);
+      
+      @include mobile {
+        @include paddingY(12px);
+      }
+      
+      @include desktop {
+        @include paddingY(6px);
+      }
+    }
+  }
+
+  // 탭 패널 공통 항목
+  section [class*=__title__group]{
+    @include paddingY(20px);
+    padding-bottom: 10px;
+    
+    @include desktop {
+      @include paddingX(15px);
+    }
+
+    & [class*=__title]{
+      color: $primaryBlue;
+      padding-left: 12px;
+      @include fontStyle(bold, 20px, 100%);
+      background: url(../../images/icon-news-headline.svg) no-repeat;
+      background-position: left center;
+      
+      @include mobile {
+        margin-bottom: 10px;
+      }
+      
+      @include desktop {
+        margin-bottom: 8px;
+      }
+    }
+
+    section [class*=__desc] {
+      padding-left: 5px;
+      @include fontStyle(400, 13px, 100%);
+    }
+  }
+
+  // 공지사항, 홍보 마케팅
+  .notices, .marketing, .press {
+    padding-bottom: 20px;
+    // display: none;
+  }
+
+  // 언론 속 이디야
+  .press {
+    form {
+      padding-top: 15px;
+      margin-bottom: 15px;
+      
+      fieldset {
+        @include flexbox($justify: space-between, $items: center);
+      }
+
+      select {
+        @include paddingX(6px);
+        @include paddingY(6px);
+        @include fontStyle(400, 14px, 100%);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 80px;
+        border: 0;
+        border-radius: 3px;
+        background: $grayscaleSnow url(../../images/icon-arrow-down.svg) no-repeat;
+        background-size: 50% 50%;
+        background-position: right -8px top 8px;
+      }
+    }
+
+    &__input-wrapper {
+      position: relative;
+      flex-grow: 1;
+      margin-left: 6px;
+
+      input {
+        @include paddingX(6px);
+        @include paddingY(6px);
+        padding-right: 26px;
+        @include fontStyle(400, 14px, 100%);
+        color: $grayscaleBlack;
+        width: 100%;
+        height: 26px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom-color: $grayscaleBlack;
+      }
+
+      button {
+        @include buttonNone;
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background: url(../../images/icon-search.svg) no-repeat;
+      }
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 10px;
+      border-collapse: initial;
+      table-layout: fixed;
+
+      td {
+        text-align: center;
+        @include paddingY(10px);
+        @include paddingX(7px);
+      }
+
+      thead {
+        td {
+          @include fontStyle(bold, 14px, 100%);
+          border-top: 2px solid $primaryBlue;
+          border-bottom: 1px solid $primaryBlue3;
+          color: $primaryBlue;
+
+          &:first-child {
+            width: 13.33%;
+          }
+
+          &:nth-child(2) {
+            width: 62.03%;
+          }
+
+          &:last-child {
+            width: 24.64%;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            @include fontStyle(400, 12px, 100%);
+            border-bottom: 1px solid $primaryBlue3;
+            color: $primaryBlue;
+          }
+
+          &:last-child td {
+            border-bottom: 2px solid $primaryBlue;
+          }
+        }
+
+        dl {
+          text-align: left;
+          
+          dt {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: rem(14px);
+            margin-bottom: 4px;
+          }
+          
+          dd {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: rem(18px);
+            color: $grayscaleGray2;
+          }
+        }
+
+      }
+
+      figure {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    .pagination {
+      @include flexbox($justify: center, $items: center);
+      gap: 14px;
+
+      button {
+        @include buttonNone;
+        width: 16px;
+        height: 16px;
+      }
+
+      & > button {
+        background: url(../../images/button-prev.svg) no-repeat;
+
+        &:last-child {
+          background: url(../../images/button-next.svg) no-repeat;
+        }
+      }
+      
+      &__number {
+        @include flexbox;
+        gap: 10px;
+
+        & li {
+          @include fontStyle(400,12px, 100%);
+          color: $primaryBlue3;
+
+          &.is--active {
+            color: $primaryBlue;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .award {
+    &__title__group {
+      margin-bottom: 25px;
+    }
+
+    &__bg {
+      padding-top: 25px;
+      padding-bottom: 37px;
+      background: $grayscaleSnow;
+    }
+
+    .year__list {
+      & > li {
+        @include flexbox;
+
+        h3 {
+          position: relative;
+          flex-basis: rem(66px);
+          @include fontStyle(700,20px, 100%);
+          color: $primaryBlue;
+
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            right: -2px;
+            top: 10px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: $primaryBlue;
+          }
+        }
+      }
+    }
+
+    &__list {
+      position: relative;
+      width: calc(100% - 66px);
+      padding-left: 5px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        display: block;
+        width: 1px;
+        height: calc(100% + 12px);
+        background: $primaryBlue4;
+      }
+    }
+
+    &__item {
+      padding-left: 23px;
+
+      button {
+        position: relative;
+        @include buttonNone;
+        @include fontStyle(700, 13px, 130%);
+        @include paddingY(4px);
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: left;
+        padding-right: 46px;
+        background: url(../../images/icon-arrow-down.svg) no-repeat;
+        background-position: right center;
+
+        &::before {
+          @include fontStyle(400,12px, 100%);
+          content: attr(data-month);
+          position: absolute;
+          left: -21px;
+          top: 6px;
+        }
+      }
+
+      &.is--active {
+        button {
+          margin-bottom: 5px;
+        }
+
+        p {
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        display: none;
+
+        @include fontStyle(400, 12px, 130%);
+        margin-top: 6px;
+
+        span {
+          display: block;
+          @include marginY(10px);
+        }
+
+        time {
+          @include fontStyle(700,11px, 130%);
+          color: $primaryBlue2;
+
+          &::before {
+            content: "수상일";
+            display: inline-block;
+            @include paddingX(6px);
+            @include paddingY(3px);
+            color: $primaryBlue4;
+            background: $primaryBlue;
+            border-radius: 25px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
 // 이디야 소식 (News) 종료 ------------------------------------------------------------- /
