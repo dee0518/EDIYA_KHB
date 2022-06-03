@@ -1867,6 +1867,9 @@ button {
   background-repeat: no-repeat;
   background-position: 50%, 50%;
 }
+.store-search__tabContents {
+  background-color: #fefefe;
+}
 
 .signIn-container {
   height: 100vh;

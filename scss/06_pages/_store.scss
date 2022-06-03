@@ -15,35 +15,37 @@
       &.is-active{
         background-color: $primaryBlue;
         color: $grayscaleWhite;
-      }
-    }
-    
+        }
+      }    
     }
     &__form{
       background-color: $primaryBlue;
       padding:8px;
       position: relative;
-      input{
-        width: 100%;
-        height: rem(26px);
-        font-size: 13px;
-        color: $primaryBlue;
-        padding-left: 7px
-      }
-      button{
-        @include buttonNone;
-        overflow: hidden;
-        white-space: nowrap;
-        width:24px;
-        height: 24px;
-        text-indent: 1200rem;
-        position: absolute;
-        top: 9px;
-        right: 8px;
-        background-image: url(./../../images/icon-search.svg);
-        background-repeat: no-repeat;
-        background-position: (50%, 50%);        
-      }
+        input{
+          width: 100%;
+          height: rem(26px);
+          font-size: 13px;
+          color: $primaryBlue;
+          padding-left: 7px
+        }
+        button{
+          @include buttonNone;
+          overflow: hidden;
+          white-space: nowrap;
+          width:24px;
+          height: 24px;
+          text-indent: 1200rem;
+          position: absolute;
+          top: 9px;
+          right: 8px;
+          background-image: url(./../../images/icon-search.svg);
+          background-repeat: no-repeat;
+          background-position: (50%, 50%);        
+        }
+     }
+    &__tabContents{
+      background-color: $grayscaleWhite;
+    }
   }
-}
 // 이디야 매장 찾기 (Store) 종료 ------------------------------------------------------ /
