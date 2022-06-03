@@ -1,3 +1,566 @@
-// 이디야 홈(메인 페이지) 시작 ------------------------------------------------------------- /
+@include mobile {
+  /* section 1 */
 
-// 이디야 홈(메인 페이지) 종료 ------------------------------------------------------------------ /
+  /* context */
+  .home__main--group {
+    text-align: center;
+    background: $secondaryLightBlue;
+    min-width: 375px;
+    height: 222px;
+  }
+
+  .home__main-text--thin {
+    @include fontStyle($weight: 100, $size: 25px, $lh: 110%);
+    // font-family: "Spoqa Han Sans", "Sans-serif";
+    position: relative;
+    width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    padding-top: 42px;
+  }
+  .home__main-text--bold {
+    display: block;
+    font-weight: 700;
+    color: $primaryBlue8;
+  }
+  .home__main-text--thin::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 1px solid $grayscaleBlack;
+    position: absolute;
+    // top: 78px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home__context--group {
+    margin-bottom: 15px;
+  }
+
+  .home__img--group {
+    width: 100%;
+    height: 165px;
+    position: relative;
+    background: $grayscaleWhite;
+  }
+  .home__button-group {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 16px;
+    display: flex;
+    vertical-align: center;
+  }
+
+  .home__notice-button--prev,
+  .home__notice-button--next {
+    border: 0;
+    border: 1px solid white;
+    width: 15px;
+    height: 15px;
+    outline: 0;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 2px;
+    position: relative;
+  }
+  .home__plus-button {
+    color: $grayscaleSnow;
+    position: absolute;
+    top: 1;
+    width: 10px;
+  }
+  .home__more-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $grayscaleSnow;
+    border: 1px solid $grayscaleSnow;
+    width: 15px;
+    height: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1px;
+  }
+
+  .home__prev-button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);
+    width: 15px;
+  }
+  .home__next-button {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 15px;
+  }
+
+  .home__beverages-img {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px;
+    height: auto;
+  }
+  .home__imgs--group {
+    display: none;
+  }
+
+  .home__sub-text {
+    @include fontStyle($weight: 400, $size: 13px, $lh: 150%);
+    font-family: "Spoqa Han Sans", "Sans-serif";
+  }
+
+  //버튼
+  .home__menu-button {
+    display: inline-block;
+    border: 1px solid $primaryBlue;
+    color: $primaryBlue8;
+    @include fontStyle($weight: 700, $size: 14px, $lh: 15.4px);
+    @include paddingY($paddingY: 8px);
+    @include paddingX($paddingX: 16px);
+  }
+
+  /* section 2 */
+
+  .home__iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    min-width: 375px;
+  }
+  .home__iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .home__notice-box {
+    min-width: 125px;
+    // height: 115px;
+    height: auto;
+    background: $primaryBlue
+      linear-gradient(to bottom, $primaryBlue5 50%, $primaryBlue9 100%);
+    position: relative;
+  }
+  .home__notice-title-notice {
+    margin-top: 15px;
+    margin-left: 15px;
+    @include fontStyle($weight: 700, $size: 16px, $lh: 16px);
+    color: $grayscaleWhite;
+  }
+
+  .home__notice-group {
+    @include flexbox;
+  }
+
+  .home__notice-item-group {
+    min-width: 250px;
+    height: 115px;
+    @include paddingY($paddingY: 16px);
+    @include paddingX($paddingX: 15px);
+    flex-grow: 1;
+  }
+
+  .home__notice-title-members {
+    @include fontStyle($weight: 700, $size: 16px, $lh: 16px);
+    color: $primaryBlue;
+  }
+  .home__notice-time {
+    @include fontStyle($weight: 400, $size: 12px, $lh: 100%);
+    color: $grayscaleGray2;
+    margin-top: 10px;
+    min-width: 250px;
+  }
+  .home__notice-list {
+    padding-top: 10px;
+  }
+
+  .home__notice-item {
+    @include fontStyle($weight: 400, $size: 13px, $lh: 150%);
+  }
+
+  .home__news-group {
+    background: $primaryBlue;
+    min-width: 375px;
+    height: 100%;
+    position: relative;
+  }
+  .home__news-title {
+    color: $grayscaleWhite;
+    @include fontStyle($weight: 700, $size: 16px, $lh: 100%);
+    @include paddingY($paddingY: 15px);
+    padding-left: 15px;
+  }
+  .home__news-list {
+    @include marginX($marginX: 15px);
+    padding-bottom: 13px;
+  }
+  .home__news-item {
+    @include fontStyle($weight: normal, $size: 16px, $lh: normal);
+    @include flexbox($direction: row, $justify: space-between, $wrap: nowrap);
+  }
+  .home__news-item--link {
+    @include fontStyle($weight: 400, $size: 13px, $lh: 150%);
+    color: $grayscaleSnow;
+  }
+  .home__news-item--time {
+    @include fontStyle($weight: 400, $size: 12px, $lh: 150%);
+    color: $grayscaleSnow;
+  }
+}
+
+@include desktop {
+  /*section*/
+  /* context */
+  .home__main--group {
+    text-align: center;
+    background: $secondaryLightBlue;
+    height: 260px;
+    width: 100%;
+  }
+  .home__main-text--thin {
+    @include fontStyle($weight: 100, $size: 31px, $lh: 110%);
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+  }
+  .home__main-text--bold {
+    font-weight: 700;
+    color: $primaryBlue8;
+  }
+  .home__main-text--thin::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 1px solid $grayscaleBlack;
+    position: absolute;
+    // top: 78px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home__menu-button {
+    display: inline-block;
+    border: 1px solid $primaryBlue;
+    color: $primaryBlue8;
+    @include fontStyle($weight: 700, $size: 14px, $lh: 15.4px);
+    @include paddingY($paddingY: 8px);
+    @include paddingX($paddingX: 24px);
+  }
+  .home__context--group {
+    margin-bottom: 30px;
+  }
+
+  .home__beverages-img {
+    display: none;
+  }
+  .home__beverages-img {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px;
+    height: auto;
+  }
+  .home__imgs--group {
+    // left: 50%;
+    // transform: translateX(-50%);
+    // width: 100%;
+  }
+
+  .home__cookie-rice-img {
+    position: absolute;
+    top: -120px;
+    right: -200px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .home__cheese-img {
+    position: absolute;
+    left: -80px;
+    top: -220px;
+    // max-width: 100%;
+    background-size: cover;
+    background-position: 50%;
+  }
+  .home__iframe-container {
+    // width: 100%;
+  }
+  .home__notice-page {
+    height: 260px;
+    padding: 77px 0;
+  }
+  .home__notice-box {
+    min-width: 125px;
+    // height: 115px;
+    height: auto;
+    background: $primaryBlue
+      linear-gradient(to bottom, $primaryBlue5 50%, $primaryBlue9 100%);
+    position: relative;
+  }
+  .home__notice-title-notice {
+    margin-top: 15px;
+    margin-left: 15px;
+    @include fontStyle($weight: 700, $size: 16px, $lh: 16px);
+    color: $grayscaleWhite;
+  }
+  //   .home__notice-desktop-group {
+  //     @include flexbox(
+  //       $direction: column,
+
+  //       $wrap: nowrap
+  //     );
+  //   }
+  .home__notice-desktop-group {
+  }
+  .home__button-group {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 205px;
+  }
+
+  .home__notice-group {
+    @include flexbox;
+  }
+
+  .home__notice-item-group {
+    min-width: 250px;
+    height: 105px;
+    @include paddingY($paddingY: 16px);
+    @include paddingX($paddingX: 15px);
+    flex-grow: 1;
+    background: $grayscaleWhite;
+  }
+
+  .home__notice-title-members {
+    @include fontStyle($weight: 700, $size: 16px, $lh: 16px);
+    color: $primaryBlue;
+  }
+  .home__notice-time {
+    @include fontStyle($weight: 400, $size: 12px, $lh: 100%);
+    color: $grayscaleGray2;
+    margin-top: 10px;
+    min-width: 250px;
+  }
+  .home__notice-list {
+    padding-top: 10px;
+  }
+
+  .home__notice-item {
+    @include fontStyle($weight: 400, $size: 13px, $lh: 150%);
+  }
+
+  .home__news-group {
+    background: $primaryBlue;
+    min-width: 375px;
+    height: 100px;
+    position: relative;
+  }
+  .home__news-title {
+    color: $grayscaleWhite;
+    @include fontStyle($weight: 700, $size: 16px, $lh: 100%);
+    @include paddingY($paddingY: 15px);
+    padding-left: 15px;
+  }
+  .home__news-list {
+    @include marginX($marginX: 15px);
+    padding-bottom: 13px;
+  }
+  .home__news-item {
+    @include fontStyle($weight: normal, $size: 16px, $lh: normal);
+    @include flexbox($direction: row, $justify: space-between, $wrap: nowrap);
+  }
+  .home__news-item--link {
+    @include fontStyle($weight: 400, $size: 13px, $lh: 150%);
+    color: $grayscaleSnow;
+  }
+  .home__news-item--time {
+    @include fontStyle($weight: 400, $size: 12px, $lh: 150%);
+    color: $grayscaleSnow;
+  }
+  .home__more-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $grayscaleSnow;
+    border: 1px solid $grayscaleSnow;
+
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+/***************************************/
+@include desktop {
+  /*section*/
+  /* context */
+
+  .home__main-page {
+    overflow: hidden;
+  }
+  .home__main--group {
+    text-align: center;
+    background: $secondaryLightBlue;
+    height: 260px;
+    width: 100%;
+  }
+  .home__main-text--thin {
+    @include fontStyle($weight: 100, $size: 31px, $lh: 110%);
+    position: relative;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+  }
+  .home__main-text--bold {
+    font-weight: 700;
+    color: $primaryBlue8;
+  }
+  .home__main-text--thin::after {
+    content: "";
+    display: block;
+    width: 40px;
+    border-bottom: 1px solid $grayscaleBlack;
+    position: absolute;
+    // top: 78px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home__menu-button {
+    display: inline-block;
+    border: 1px solid $primaryBlue;
+    color: $primaryBlue8;
+    @include fontStyle($weight: 700, $size: 14px, $lh: 15.4px);
+    @include paddingY($paddingY: 8px);
+    @include paddingX($paddingX: 24px);
+  }
+  .home__context--group {
+    margin-bottom: 30px;
+  }
+
+  .home__beverages-img {
+    display: none;
+  }
+  .home__beverages-img {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px;
+    height: auto;
+  }
+
+  .home__imgs--group {
+    position: relative;
+    height: 245px;
+    width: 100%;
+  }
+
+  .home__cookie-rice-img {
+    position: absolute;
+    top: -120px;
+    right: -200px;
+    max-width: 100%;
+  }
+
+  .home__cheese-img {
+    position: absolute;
+    left: -80px;
+    top: -220px;
+    // max-width: 100%;
+    background-size: cover;
+    background-position: 50%;
+  }
+  .home__iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 365px;
+    height: 205px;
+  }
+  .home__iframe-container iframe {
+    width: 100%;
+    height: 205px;
+  }
+  .home__notice-page {
+    @include flexbox($justify: center);
+    height: 330px;
+    background: $grayscaleSnow;
+  }
+
+  .home__button-group {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 16px;
+    display: flex;
+    vertical-align: center;
+  }
+
+  .home__notice-button--prev,
+  .home__notice-button--next {
+    border: 0;
+    border: 1px solid white;
+    width: 15px;
+    height: 15px;
+    outline: 0;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 2px;
+    position: relative;
+  }
+
+  .home__prev-button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(90deg);
+    width: 15px;
+  }
+  .home__next-button {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 15px;
+  }
+  .home__plus-button {
+    color: $grayscaleSnow;
+    position: absolute;
+    top: 1;
+    width: 10px;
+  }
+  .home__more-info {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: $grayscaleSnow;
+    border: 1px solid $grayscaleSnow;
+    width: 15px;
+    height: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 1px;
+  }
+}

@@ -4,76 +4,135 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>홈</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- start of baverages -->
-    <div class="home--container inner">
-      <section class="home--main-page">
-        <div class="home__section--container">
-          <h2 class="home--main-text--thin">
-            ALWAYS BESIDE YOU
-            <span class="home--main-text--bold">EDIYA COFFEE</span>
-          </h2>
-          <!-- h2 ::after로 구분선 -->
-          <p class="home--sub-text">
-            늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.
-          </p>
-          <a href="/" class="home--menu__button">메뉴 보기</a>
+    <div class="home__container">
+      <section class="home__main-page">
+        <!-- context group -->
+        <div class="home__main--group">
+          <div class="home__context--group">
+            <h2 class="home__main-text--thin">
+              ALWAYS BESIDE YOU
+              <span class="home__main-text--bold">EDIYA COFFEE</span>
+            </h2>
+            <p class="home__sub-text">
+              늘 당신 곁에, 이디야 커피의 새로운 메뉴를 맛보세요.
+            </p>
+          </div>
+          <a href="/" class="home__menu-button">메뉴 보기</a>
         </div>
-        <img
-          src="../images/choco-rice.png"
-          alt="choco-rice image"
-          class="home--bg__img"
-        />
-        <div class="home__bg__color" aria="hidden"></div>
+        <!-- image group -->
+        <div class="home__img--group">
+          <img
+            src="../images/choco-rice.png"
+            alt="choco-rice image"
+            class="home__beverages-img"
+          />
+        </div>
+        <div class="home__imgs--group inner">
+          <img
+            src="../images/cheese-cookie-img.png"
+            alt="cheese-cookie image"
+            class="home__cheese-img"
+          />
+          <img
+            src="../images/choco-rice-img.png"
+            alt="choco-rice image"
+            class="home__cookie-rice-img"
+          />
+        </div>
       </section>
-      <section class="home--notice-page">
+      <section class="home__notice-page">
         <h2 class="home__notice-header a11yHidden">이디야 뉴스</h2>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/UGPo0RqhbKU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div class="home--notice--group">
-          <div class="home--notice--box">
-            <h3 class="home--notice-title--left">NOTICE</h3>
-            <!-- bacground로 이미지 넣기 -->
-            <button class="home--notice__button--prev">이전 방향</button>
-            <button class="home--notice__button--next">다음 방향</button>
-          </div>
-          <div class="home--notice--group">
-            <h3 class="home--notice-title--right">
-              이디야멤버스가 새로워집니다.
-            </h3>
-            <time datetitme="2022-06-07">2020.04.25</time>
-            <ul class="home--notice__list">
-              <li class="home--notice-item">
-                이디야 멤버스에 새로운 기능이 추가됩니다.
-              </li>
-              <!-- ellipsis 사용해서 뒤 어쩌구 저쩌구 생략 -->
-              <li class="home--notice-item">
-                추가되는 고객등급제, 이디야카드, 스마트 어쩌구 저쩌구
-              </li>
-            </ul>
-            <!-- 위치 수정 -->
-          </div>
+        <div class="home__iframe-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/UGPo0RqhbKU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="home--news--group">
-          <h3 class="home--news-title">NEWS</h3>
-          <ul class="home--news__list">
-            <li class="home--news-item">
-              <a href="/">[MTN]이디야커피, 조각 케이크 2종 출시 어쩌구</a>
-              <time datetime="2022-06-07">2020.09.08</time>
-            </li>
-            <a href="/">[아시아 경제]이디야커피, '비니스트 커피믹스 어쩌구'</a>
-            <time datetime="2022-06-07">2020.08.27</time>
-            <a href="/" class="home--more-information">+</a>
-          </ul>
+        <div class="home__notice-desktop-group">
+          <div class="home__notice-group">
+            <div class="home__notice-box">
+              <h3 class="home__notice-title-notice">NOTICE</h3>
+              <!-- bacground로 이미지 넣기 -->
+              <div class="home__button-group">
+                <button
+                  class="home__notice-button--prev"
+                  aria-label="이전 이벤트 보기"
+                >
+                  <img
+                    class="home__prev-button"
+                    src="./images/icon-arrow-down.svg"
+                    alt="이전 이벤트 보기"
+                  />
+                </button>
+                <button
+                  class="home__notice-button--next"
+                  aria-label="다음 이벤트 보기"
+                >
+                  <img
+                    class="home__next-button"
+                    src="./images/icon-arrow-down.svg"
+                    alt="다음 이벤트 보기"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="home__notice-item-group">
+              <h3 class="home__notice-title-members">
+                이디야멤버스가 새로워집니다.
+              </h3>
+              <time class="home__notice-time" datetitme="2022-06-07"
+                >2020.04.25</time
+              >
+              <ul class="home__notice-list">
+                <li class="home__notice-item">
+                  이디야멤버스에 새로운 기능이 추가됩니다.
+                </li>
+                <!-- ellipsis 사용해서 뒤 어쩌구 저쩌구 생략 -->
+                <li class="home__notice-item">
+                  추가되는 고객등급제, 이디야카드, 스마트..
+                </li>
+              </ul>
+              <!-- 위치 수정 -->
+            </div>
+          </div>
+          <div class="home__news-group">
+            <h3 class="home__news-title">NEWS</h3>
+            <ul class="home__news-list">
+              <li class="home__news-item">
+                <a href="/" class="home__news-item--link"
+                  >[MTN]이디야커피, 조각 케이크 2종 출시...</a
+                >
+                <time datetime="2022-06-07" class="home__news-item--time"
+                  >2020.09.08</time
+                >
+              </li>
+              <li class="home__news-item">
+                <a href="/" class="home__news-item--link"
+                  >[아시아 경제]이디야커피, '비니스트 커피믹스...'</a
+                >
+                <time datetime="2022-06-07" class="home__news-item--time"
+                  >2020.08.27</time
+                >
+              </li>
+              <a href="/" class="home__more-info">
+                <img
+                  class="home__plus-button"
+                  src="./images/plus.svg"
+                  alt="more information"
+                />
+              </a>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
