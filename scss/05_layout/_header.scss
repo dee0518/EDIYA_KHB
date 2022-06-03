@@ -1,6 +1,111 @@
 // 헤더 시작 ------------------------------------------------------------------------ /
-
-// 헤더 종료 --------------------------------------------------------------------- /
 .header {
-  display: block;
+  background: $grayscaleWhite;
+  border-bottom: 1px solid $grayscaleSnow;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+
+  .logo {
+    width: rem(140px);
+
+    a {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .inner {
+    @include flexbox(row, space-between, center, nowrap);
+
+    @include desktop {
+      @include paddingY(10px);
+    }
+  }
+
+  & .inner > button:first-of-type {
+    @include mobile {
+      @include buttonNone;
+      width: 50px;
+      height: 50px;
+      margin-right: rem(-18px);
+      background: url(../../images/button-navigation.svg) no-repeat;
+      background-position: center;
+    }
+      
+    @include desktop {
+      display: none;
+    }
+  }  
 }
+
+.nav {
+  @include mobile {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 106px;
+    background: $grayscaleDarkGray;
+  }
+
+  ul {
+    @include mobile {
+      @include paddingX(10px);
+
+      li {
+        border-top: 1px solid $primaryBlue2;
+        color: $white;
+  
+        a {
+          display: block;
+          @include paddingX(12px);
+          @include paddingY(12px);
+          @include fontStyle(400, 14px);
+        }
+      }
+    }
+
+    @include desktop {
+      @include flexbox($justify: space-between, $items: center);
+      margin-right: -3px;
+
+      li {
+        margin-left: rem(2px);
+        color: $primaryBlue;
+
+        &.on a {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        @include paddingX(3px);
+        @include paddingY(4px);
+        @include fontStyle(400, 15px, 1.46);
+      }
+    }
+  }
+
+  button {
+    @include mobile {
+      @include buttonNone;
+      position: absolute;
+      width: rem(50px);
+      height: rem(50px);
+      right: rem(8px);
+      top: rem(8px);
+      background: url(../../images/button-detail-close.svg) no-repeat;
+      background-position: center;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+    
+}
+// 헤더 종료 --------------------------------------------------------------------- /
