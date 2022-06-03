@@ -1,3 +1,49 @@
 // 이디야 매장 찾기 (Store) 시작 ------------------------------------------------------ /
 
+.store-search{
+  padding-top: 20px;
+  &__tablist{
+  @include flexbox;
+  width: 100%;
+    li{
+      flex: 1;
+      text-align: center;
+      height: rem(32px);
+      line-height: rem(32px);
+      background-color: $grayscaleWhite;
+      color:$primaryBlue;
+      &.is-active{
+        background-color: $primaryBlue;
+        color: $grayscaleWhite;
+      }
+    }
+    
+    }
+    &__form{
+      background-color: $primaryBlue;
+      padding:8px;
+      position: relative;
+      input{
+        width: 100%;
+        height: rem(26px);
+        font-size: 13px;
+        color: $primaryBlue;
+        padding-left: 7px
+      }
+      button{
+        @include buttonNone;
+        overflow: hidden;
+        white-space: nowrap;
+        width:24px;
+        height: 24px;
+        text-indent: 1200rem;
+        position: absolute;
+        top: 9px;
+        right: 8px;
+        background-image: url(./../../images/icon-search.svg);
+        background-repeat: no-repeat;
+        background-position: (50%, 50%);        
+      }
+  }
+}
 // 이디야 매장 찾기 (Store) 종료 ------------------------------------------------------ /

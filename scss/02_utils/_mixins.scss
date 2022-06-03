@@ -47,11 +47,27 @@
   padding-left: rem($paddingX);
   padding-right: rem($paddingX);
 }
-
+@mixin signButton($color: $grayscaleWhite, $bdcolor: $grayscaleWhite){
+ @include fontStyle(700, 20px);
+  width:100%;
+  height:rem(48px);
+  line-height: rem(48px);
+  border-radius: 8px;
+  border: 1px solid $grayscaleWhite;
+  color: $color;
+  border-color: $bdcolor;  
+}
 // 버튼 기본 스타일 제거
 @mixin buttonNone {
   appearance:none;
   border:0;
   padding:0;
   background:none;
+}
+
+//position 중간
+@mixin centerAlignY {
+  position: absolute;
+  top:50%;
+  transform:translateY(-45%)  
 }
